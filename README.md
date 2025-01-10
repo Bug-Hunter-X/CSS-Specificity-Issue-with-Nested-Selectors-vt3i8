@@ -1,0 +1,1 @@
+This repository demonstrates an uncommon CSS bug related to selector specificity. The `bug.css` file contains CSS code that exhibits unexpected behavior due to the interaction between class, ID, and nested selectors.  The `bugSolution.css` file offers a solution and demonstrates how to use specificity and the cascade effectively to prevent unexpected outcomes.
