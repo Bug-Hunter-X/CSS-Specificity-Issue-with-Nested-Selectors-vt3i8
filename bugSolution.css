@@ -1,0 +1,21 @@
+The solution involves a better understanding of CSS specificity and the cascade. In this particular case, the unexpected behavior is caused by the fact that the most specific selector wins.  To solve this, you could either:
+
+1. **Avoid overly specific selectors:** Try to use more general selectors to improve maintainability and predictability. For example, you might want to refactor your CSS to rely less on nested selectors and more on separate class names. For example if the `#container` is not also a `.container`, this will simplify. 
+
+2. **Use !important (with caution):** Use the `!important` flag only as a last resort. This overrides all other specificity rules, but it can make the CSS difficult to maintain and debug:
+
+```css
+.container {
+  width: 500px !important;
+}
+
+#container {
+  width: 600px;
+}
+
+.container #container {
+  width: 700px;
+}
+```
+
+The `bugSolution.css` demonstrates a refined approach. This focuses on better CSS organization using clearer selectors and avoiding unexpected specificity issues.
