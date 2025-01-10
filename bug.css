@@ -1,0 +1,19 @@
+The following CSS code snippet exhibits an uncommon error related to the specificity of CSS selectors and the cascade:
+
+```css
+.container {
+  width: 500px;
+}
+
+#container {
+  width: 600px;
+}
+
+.container #container {
+  width: 700px;
+}
+```
+
+The expected behavior might be that the element with the ID `container` would override the class selector `.container`, resulting in a width of 600px. However, the last selector `.container #container` is even more specific and will override the previous declarations resulting in 700px.
+
+This situation can be particularly confusing when working with complex CSS layouts involving many selectors and nested elements, and may lead to unexpected behavior and difficult-to-debug issues.
